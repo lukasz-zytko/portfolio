@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from django.urls import path
+from .views import home, me, contact
 
 urlpatterns = [
-    path("", lambda request: HttpResponse("Strona główna")),
-    path("me", lambda request: HttpResponse("O mnie")),
-    path("contact", lambda request: HttpResponse("Kontakt")),
+    path("", home),
+    path("me", me),
+    path("contact", contact),
 ]
