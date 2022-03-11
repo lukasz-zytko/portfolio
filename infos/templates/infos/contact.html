@@ -3,5 +3,36 @@
 {% block title %} {{ title }} :: Portfolio {% endblock %}
 
 {% block content%}
-<h2>{{ title }}</h2>
+
+<h1>{{ title }}</h1>
+<h2>Skontaktuj się ze mną</h2>
+<ul>
+    <li>Imię i nazwisko: <strong>Łukasz Żytko</strong></li>
+    <li>Adres: <strong>ul. Czechowicka 26/28 Warszawa</strong></li>
+    <li>Email: <strong>lukasz@zytko.pl</strong></li>
+    <li>Git: <strong>https://github.com/lukasz-zytko/</strong></li>
+</ul>
+<h2>Skorzystaj z formularza</h2>
+<form>
+    <table>
+        <tr>
+            <td><label>Imię:</label></td>
+            <td><input type="text" placeholder="Podaj swoje imię" required></td>
+        </tr>
+        <tr>
+            <td><label>Twój email:</label></td>
+            <td><input type="email" placeholder="Podaj email" required></td>
+        </tr>
+        <tr>
+            <td><label>Wiadomość</label></td>
+            <td><textarea rows="10" cols="60" placeholder="Wpisz wiadomość" required></textarea></td>
+        </tr>
+        <tr>
+            <td><label></label></td>
+            <td><button type="submit">Wyślij</button>&nbsp;<button type="reset">Wyczyść</button></td>
+        </tr>      
+    </table>
+</form>
+
+
 {% endblock %}

@@ -5,16 +5,22 @@
    <title>{% block title %} Portfolio {% endblock %}</title>
 </head>
 <body>
-   <p>
-   {% for nav,url in navi.items %}
-      {% if nav == title %}
-         <a href="/{{ url }}"><strong>{{ nav }}</strong></a>
-      {% else %}
-         <a href="/{{ url }}">{{ nav }}</a>
-      {% endif%}
-   {% endfor %}
-   </p>
-{% block content %}
-{% endblock %}
+   <div style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: gainsboro; width:700px; border-radius: 10px; margin-left: 25px;">
+      <div style="font-size: 18px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: black; border-radius: 10px; ">
+         <p>
+         {% for nav,url in navi.items %}
+            {% if nav == title %}
+               <a style="text-decoration: none; color: azure;" href="/{{ url }}"><strong>{{ nav }}&nbsp;&nbsp;&nbsp;</strong></a>
+            {% else %}
+               <a style="text-decoration: none; color: grey;" href="/{{ url }}">{{ nav }}&nbsp;&nbsp;&nbsp;</a>
+            {% endif%}
+         {% endfor %}
+         </p>
+      </div>
+      <div style="padding-right: 25px; padding-left: 25px; padding-bottom: 10px;">
+         {% block content %}
+         {% endblock %}
+      </div>
+   </div>
 </body>
 </html>

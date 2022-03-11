@@ -3,5 +3,18 @@
 {% block title %} {{ title }} :: Portfolio {% endblock %}
 
 {% block content%}
-<h2>{{ title }}</h2>
+
+<h1>{{ title }}</h1>
+<div>
+{% load static %}
+<img align="left" style="width:120px; padding-left: 15px; padding-right: 30px;" src="{% static 'infos/lukasz-zytko.jpg' %}" alt="JA">
+<ul>
+    <li>Nazywam się Łukasz Żytko i mieszkam w Warszawie</li>
+    <li>Zawodowo od 14 lat zajmuje się SEO</li>
+    <li>Aktualnie poszerzam swoje zainteresowania o Pythona</li>
+    <li>Prywatnie jestem mężem Joanny i ojcem oraz wielkim fanem 6-letniej Zośki</li>
+    <li>Jestem też fanem Hiszpani, kultury tego kraju ale przede wszystkim jedzednia i wina :) </li>
+</ul>
+</div>
+
 {% endblock %}
